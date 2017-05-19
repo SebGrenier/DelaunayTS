@@ -1,0 +1,15 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outFile": "bin/delaunayts.js",
+    "sourceMap": true,
+    "target": "ES6"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
