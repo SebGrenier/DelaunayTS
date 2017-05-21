@@ -1,15 +1,19 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "module": "system",
+    "module": "AMD",
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "outFile": "bin/delaunayts.js",
+    "outDir": "bin",
     "sourceMap": true,
+    "strict": true,
     "target": "ES6"
   },
   "include": [
     "src/**/*"
+  ],
+  "exclude": [
+    "tests/**/*"
   ]
 }
