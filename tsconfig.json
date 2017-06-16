@@ -1,19 +1,28 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "module": "AMD",
+    "alwaysStrict": true,
+    "module": "amd",
     "noImplicitAny": true,
+    "noImplicitThis": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "outDir": "bin",
     "sourceMap": true,
-    "strict": true,
-    "target": "ES6"
+    "target": "ES6",
+    "types": [
+      "requirejs",
+      "lodash"
+    ],
+    "typeRoots": [
+      "../node_modules/@types"
+    ]
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "tests/**/*"
+    "tests/**/*",
+    "3rdparty/**/*"
   ]
 }

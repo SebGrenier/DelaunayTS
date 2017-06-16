@@ -1,5 +1,5 @@
-import {Point} from "./point";
+import {Vector2} from "./vector2";
 
 export class Segment {
-    constructor (public p1: Point, public p2: Point) {}
+    constructor (public p1: Vector2, public p2: Vector2) {}
 }

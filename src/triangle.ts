@@ -1,5 +1,5 @@
-import {Point} from "./point";
+import {Vector2} from "./vector2";
 
 export class Triangle {
-    constructor (public p1: Point, public p2: Point, public p3: Point) {}
+    constructor (public p1: Vector2, public p2: Vector2, public p3: Vector2) {}
 }

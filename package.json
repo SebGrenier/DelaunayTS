@@ -1,9 +1,10 @@
 {
   "name": "delaunay-ts",
   "version": "0.1.0",
-  "description": "2d triangulation using delaunay",
+  "description": "A 2D Delaunay mesh generator written in TypeScript",
   "devDependencies": {
-    "@types/requirejs": "^2.1.28",
+    "@types/requirejs": "latest",
+    "@types/lodash": "latest",
     "tslint": "^5.4.2",
     "tslint-eslint-rules": "^4.1.1",
     "typescript": "^2.3.2",
