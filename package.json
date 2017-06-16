@@ -1,0 +1,36 @@
+{
+  "name": "delaunay-ts",
+  "version": "0.1.0",
+  "description": "2d triangulation using delaunay",
+  "devDependencies": {
+    "@types/requirejs": "^2.1.28",
+    "tslint": "^5.4.2",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.3.2",
+    "tspw": "^1.1.0"
+  },
+  "main": "delaunay.js",
+  "bin": {
+    "delaunay-ts": "delaunay.js"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SebGrenier/DelaunayTS.git"
+  },
+  "keywords": [
+    "delaunay",
+    "typescript"
+  ],
+  "author": "Sebastien Grenier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SebGrenier/DelaunayTS/issues"
+  },
+  "homepage": "https://github.com/SebGrenier/DelaunayTS#readme"
+}

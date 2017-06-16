@@ -1,7 +1,7 @@
-import {IDelaunay2DSolver} from "./solvers";
+import {Mesh} from "../mesh";
 import {Point} from "../point";
 import {Triangle} from "../triangle";
-import {Mesh} from "../mesh"
+import {IDelaunay2DSolver} from "./solvers";
 
 function pointCompare (pointA: Point, pointB: Point): number {
     if (pointA.x < pointB.x)
@@ -18,7 +18,7 @@ function pointCompare (pointA: Point, pointB: Point): number {
 }
 
 function pointSort (points: Point[]): Point[] {
-    let copy = points.slice();
+    const copy = points.slice();
     return copy.sort(pointCompare);
 }
 
@@ -62,25 +62,23 @@ function splitSets (sets: Point[][]): Point[][] {
 }
 
 function mergeMesh (meshLeft: Mesh, meshRight: Mesh): Mesh {
-    let newMesh = Mesh.merge(meshLeft, meshRight);
-
-    return newMesh;
+    return Mesh.merge(meshLeft, meshRight);
 }
 
 export class DivideAndConquerSolver implements IDelaunay2DSolver {
     solve (points: Point[], constraints?: IConstraint[]): Triangle[] {
         // Sort the points by their x then y coordinates
-        let sortedPoints = pointSort(points);
+        const sortedPoints = pointSort(points);
 
         // Split the set of points in half, until you get sets of no more than 3 points
-        let sets = [sortedPoints];
-        let splittedSets = splitSets(sets);
+        const sets = [sortedPoints];
+        const splittedSets = splitSets(sets);
 
         // Convert sets of points into sets of segments and triangles
-        let shapeSets = [];
-        for (let set of splittedSets) {
-            let shapeSet = [];
-            let mesh = new Mesh(set, [Array.apply(null, {length: set.length}).map(Number.call, Number)]);
+        const shapeSets = [];
+        for (const set of splittedSets) {
+            const shapeSet = [];
+            const mesh = new Mesh(set, [Array.apply(null, {length: set.length}).map(Number.call, Number)]);
             shapeSet.push(mesh);
             shapeSets.push(shapeSet);
         }
